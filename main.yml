@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+  build:
+    name: Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: "https://jenkins.sdpmlab.org/"
+        user: "410977038"
+        token: ${{secrets.TOKEN}}
+        job: "410977038"
